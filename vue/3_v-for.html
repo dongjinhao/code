@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div id="app">
+        {{ msg }}
+        <!-- 第一个值代表数组内的元素的值 第二个值代表数组内元素的索引 -->
+        <div v-for="(item,index) in arr">
+            {{ item }} {{ index }}
+        </div>
+
+        <!-- 可以用对象点属性的方式来遍历数组内对象的属性 -->
+        <div v-for="user in listSort">
+            {{ user.name }} {{ user.age }}
+            <button @click="showMe(user)">showme</button>
+        </div>
+
+        <!-- 第一个值代表对象属性值 第二个值代表对象的属性名 -->
+        <div v-for="(attr,key) in pig">
+            {{ attr }} {{ key }}
+        </div>
+
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                msg: '我是你爹',
+                arr: ['a', 'b', 'c'],
+                list: [
+                    {
+                        name: 'dasha',
+                        age: 22
+                    }, {
+                        name: 'xiaohua',
+                        age: 21
+                    }, {
+                        name: 'zhujing',
+                        age: 2
+                    }
+                ],
+                pig: {
+                    name: 'zhujing',
+                    age: 2
+                }
+            },
+            //  计算
+            computed:{
+                listSort(){
+                    // this指向vue实例化对象
+                    return this.list.sort((a,b)=>{
+                        return a.age - b.age;
+                    })
+                }
+            },methods:{
+                showMe(obj){
+                    console.log(obj);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
