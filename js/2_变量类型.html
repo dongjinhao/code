@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">
+        !@#$%^&*
+    </div>
+    <button id="click">click</button>
+    <script>
+
+        // 判断类型
+        // js是弱数据类型语言 
+        var a = 10;
+        console.log(typeof (a));        // "number"
+        var b = 'abc';  // 不区分单引号 双引号
+        console.log(typeof (b));        // "string"
+        var c = true;
+        console.log(typeof (c));        // "boolean"
+        var d;      // 定义 没有赋值 输出undefined
+        console.log(d);                 // "undefined"
+        var oDiv = document.getElementById('div2');     //取不到元素返回null
+        console.log(oDiv);              // "null"
+        // js的基本数据类型 number boolean string undefined null
+
+        /* var oDiv = document.getElementById('div1');
+        var oBtn = document.getElementById('click');
+        oBtn.onclick = function () {
+            oDiv.style.background = 'red';
+        } */
+
+
+    </script>
+</body>
+
+</html>
