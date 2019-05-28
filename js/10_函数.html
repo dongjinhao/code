@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 函数的提升 相当于在当前作用域最上面声明该函数 但没有赋值
+        function add(x, y) {
+            return x + y;
+        }
+
+        var add = function (x, y) {
+            return x + y;
+        }
+
+        console.log(add(2, 3));
+    </script>
+</body>
+
+</html>
