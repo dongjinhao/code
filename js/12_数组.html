@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 1.js的基本数据类型 number string null boolean 
+        undefined
+            定义变量没有赋值
+            函数没有返回值 默认返回undefined
+            访问数组越界
+        2.js的引用数据类型 array object-->
+    <script>
+
+        // 创建数组的方式 数组直接量
+        var arr = [1, 2, 3, 4, 5];
+        console.log(arr[0]);        // 1
+
+        var arr1 = new Array(1, 2, 3, 4, 5);
+        // 用一下这种方法声明的数组 表示为长度为3的空数组
+        var arr2 = new Array(3);
+        console.log(arr2);
+
+        // 循环遍历数组
+        var arr3 = ['a', 'b', 'c'];
+        for (var i = 0; i < arr3.length; i++) {
+            console.log(arr3[i]);
+        }
+
+        var arr4 = [];
+        arr4[0] = 1;
+        arr4[3] = 4;
+        console.log(arr4);          // [1, empty × 2, 4]
+
+
+
+    </script>
+</body>
+
+</html>
