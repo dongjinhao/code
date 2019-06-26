@@ -15,8 +15,62 @@
         DOM对象
      -->
     <script>
+        // conact 用于连接数组 原数组不会改变 返回一个全新的数组
+        // var a1 = [1, 2, 3];
+        // var a2 = [3, 4, 5];
+        // var a3 = a1.concat(a2);
+        // console.log(a3);
 
-        
+        // join 数组元素转化成字符串 括号传指定的分隔符
+        // var a4 = [1, 2, 3, 4];
+        // console.log(a4.join());
+
+        // pop 用于删除并返回数组中的最后一个元素 修改原数组
+        // shift 用于删除并返回数组中的第一个元素 修改原数组
+        // var a5 = [1, 2, 3];
+        // console.log(a5.pop());      // 3
+        // console.log(a5);            // [1,2]
+
+        // push 向数组的末尾添加一个或多个元素 返回新数组长度 修改原数组
+        // console.log(a5.push(9));
+        // console.log(a5)
+
+        // reverse 颠倒数组元素顺序 修改原数组
+        // var a6 = [1, 2, 3];
+        // console.log(a6.reverse());  //[3,2,1]
+
+        // slice 截取数组中元素 左闭右开 不会修改原数组 返回新数组
+        // var a7 = [1,2,3,4,5,6,7,8,9];
+        // console.log(a7.slice(1,2)); //[2];
+        // console.log(a7.slice(1,4)); //[2,3,4];
+
+        // sort 数组排序 修改原数组 在原数组上排序 堆内存
+        // var a8 = [4, 6, 2, 9, 1, 11, 22, 45];
+        // console.log(a8.sort());     // [1, 11, 2, 22, 4, 45, 6, 9]
+        // 从小到大排序  1-2
+        // var a9 = a8.sort(function (a, b) {
+        //     return a - b;
+        // });
+        // console.log(a9);
+        // 从大到小排序  2-1
+        // var a10 = a8.sort(function (a, b) {
+        //     return b - a;
+        // });
+        // console.log(a10);
+
+        // splice  向/从数组中添加/删除项目，然后返回被删除的项目
+        // var a11 = [1,2,3,4,5,6];
+        // 添加7 8 
+        // a11.splice(5,0,7,8);
+        // console.log(a11);
+        // 删除2
+        // a11.splice(1,1);
+        // console.log(a11);
+        // 6替换为66
+        // a11.splice(5,1,66);
+        // console.log(a11);
+
+
 
     </script>
 </body>
