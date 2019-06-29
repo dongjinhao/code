@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var str = 'qweasdzxc';
+
+        // chatAt 方法输出字符串该索引的字符
+        console.log(str.charAt(0));
+
+        // concat 连接字符串 原字符串不会改变
+        var str1 = '#$%^&';
+        console.log(str.concat(str1));
+        console.log(str);
+        console.log(str1);
+
+        // indexOf 检索字符串中该字符串第一次出现的索引 从头检查 返回索引值 找不到返回-1
+        // lastindexOf 从尾检查
+        // console.log(str.indexOf('xc'));
+
+        // replace 替换
+        // console.log(str.replace('q','*'));
+
+        // slice 提取字符串中某一部分 左闭右开
+        console.log(str.slice(2,3)); 
+
+        // split 把字符串分割为字符串数组
+        var str2 = 'How old are you?'
+        console.log(str2.split(' ')); 
+        // ["How", "old", "are", "you?"]
+        console.log(str2.split(''));  
+        // ["H", "o", "w", " ", "o", "l", "d", " ", "a", "r", "e", " ", "y", "o", "u", "?"]
+
+        // substr 方法 截取字符串字符
+
+    </script>
+</body>
+
+</html>
