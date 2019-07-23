@@ -9,15 +9,14 @@
 </head>
 
 <body>
-
     <script>
-        var str = 11223344.4488;
-        console.log(parseInt(str));
-
-        console.log(parseFloat(str));
+        // 有一个三位数x，被4除余2，被7除余3，被9除余5，请求出这个数。
+        for (var i = 100; i <= 999; i++) {
+            if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5) {
+                console.log(i);
+            }
+        }
     </script>
-
-
 </body>
 
 </html>

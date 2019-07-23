@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 编写程序，计算 1!+2!+3!+…..＋10！的结果。
+        // 方法一 循环嵌套
+        var result = 0;
+        for (var i = 1; i <= 10; i++) {         // 限制从几到几的阶乘
+            var sum = 1;                        // 刷新为1
+            for (var j = 1; j <= i; j++) {      // 计算阶乘
+                sum *= j;
+            }
+            result += sum;                      // 计算阶乘的和 
+        }
+        console.log(result);
+        // 方法二 利用函数求阶乘 循环求和
+        function fn(n) {                        // 定义函数 计算阶乘
+            var sum = 1;
+            for (var i = 1; i <= n; i++) {
+                sum *= i;
+            }
+            return sum;                         // 返回结果
+        }
+        var num = 0;
+        for (j = 1; j <= 10; j++) {              // 循环计算所有阶乘
+            num += fn(j);                        // 阶乘求和
+        }
+        console.log(num);
+
+    </script>
+</body>
+
+</html>
