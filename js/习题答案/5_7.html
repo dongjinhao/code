@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。
+        // 试用递归函数和非递归函数各编写一个程序，求斐波纳契数列第N项的值。
+
+        // 方法一 函数递归 函数的递归调用 函数体内 调用自己 
+        function fib(n) {
+            if (n <= 2) {                   // 判断第一二项
+                return 1;                   // 返回一个1 return之后函数不会再继续执行
+            }   
+            return fib(n - 1) + fib(n - 2); // 前两项的和
+        }
+        alert(fib(5));
+
+        // 方法二 非递归求斐波那契数列
+        function Fib(n) {
+            if (n <= 2) {
+                return 1;
+            }
+            var f1 = 1, f2 = 1, temp;       // 定义第一二项 和 标记
+            for (var i = 3; i <= n; i++) {
+                temp = f1 + f2;             // 标记为前两项的和
+                f1 = f2;                    // f1,2整体串一位
+                f2 = temp;
+            }
+            return f2;
+        }
+        alert(Fib(5));
+    </script>
+</body>
+
+</html>

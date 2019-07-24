@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。  
+        var num = 0;                            // 设置换行标记
+        for (i = 100; i <= 1000; i++) {         // 筛选范围
+            var ok = 0;                         // 设置标记
+            for (j = 2; j < i; j++) {           // 筛选素数
+                if (i % j == 0) {               // 判断不为素数
+                    ok = 1;                     // 非素数标记为1
+                }
+            }
+            if (ok == 0) {                      // 选出未被标记的
+                document.write(i + ',');
+                num++;                          
+                if (num % 6 == 0) {             // 筛选出6倍数的标记换行
+                    document.write('<br/>');
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
