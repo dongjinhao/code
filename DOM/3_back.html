@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    这里是back页面
+    <button id="back">
+        back
+    </button>
+    <script>
+        var oBtn = document.getElementById('back')
+        oBtn.onclick = function () {
+            // 只有有历史记录的时候 back forward才好使
+            // 返回上一个页面
+            history.back();
+            // 进入下一个页面
+            history.forward();
+            // 跳转到指定页面 整数前进 负数返回
+            history.go(-1);
+        }
+
+    </script>
+</body>
+
+</html>

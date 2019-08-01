@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <button id="stop">
+        stop
+    </button>
     <h1>骨折</h1>
     <h1>骨折</h1>
     <h1>骨折</h1>
@@ -65,14 +68,40 @@
 
 
     <script>
-        // 通过id获取元素 返回的是DOM对象
+        /* // 通过id获取元素 返回的是DOM对象
         var oBtn = document.getElementById('btn');
         // 给按钮绑定点击事件
         oBtn.onclick = function () {
-            // 窗体滚动条控制
-            // window.scrollTo(0,500);     // 直接移动到500像素
+            窗体滚动条控制
+            window.scrollTo(0, 500);     // 直接移动到500像素
             window.scrollBy(0, 200);     // 当前位置移动200像素
-        }
+        } */
+
+        // console.log(window.confirm('你觉得ok吗?')); // 确认框 通过boolean判断确认或者取消
+        // window.alert('我觉得还行');                 // 弹出框
+        // window.prompt('请输入年龄',18);             // 输入框 第一个为提示 第二个为默认值
+
+        // 定时器 第一个参数为回调韩式 第二个参数为时间间隔 单位为毫秒
+        // var timer = setInterval(function () {
+        //     console.log(Math.random());
+        // }, 1000);
+        // var oStop = document.getElementById('stop');
+        // oStop.onclick = function(){
+        //     // 清除定时器
+        //     clearInterval(timer)
+        // } 
+
+        // 定时器 定时炸弹 只执行一次
+        var boom = setTimeout(function(){
+            console.log('!!!!!!!');
+        },1500);
+        var oStop = document.getElementById('stop');
+        oStop.onclick = function(){
+            // 清除定时器
+            clearTimeout(boom);
+        } 
+        
+
 
     </script>
 </body>

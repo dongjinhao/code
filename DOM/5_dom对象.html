@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- DOM文档对象模型 -->
+    <div id="div1">
+        !@#$%*()_
+    </div>
+    <ul>
+        <li></li>
+        <li class="green"></li>
+        <li></li>
+    </ul>
+    <script>
+        // 获取常用元素的方法
+        // ① 通过id获取元素 返回查找的DOM对象
+        var oDiv = document.getElementById('div1');
+        oDiv.style.color = 'red';
+        // ② 通过标签名获取元素 返回的是一个类数组 数组里存放的为DOM对象
+        var aLi = document.getElementsByTagName('li');
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].style.background = 'yellow';
+        }
+        // ③ 通过class名获取元素 返回的是一个类数组 数组里存放的为DOM对象
+        var aGreen = document.getElementsByClassName('green');
+        for (var j = 0; j < aGreen.length; j++) {
+            aGreen[j].style.background = 'green';
+        }
+    </script>
+</body>
+
+</html>
