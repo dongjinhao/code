@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            height: 200px;
+            width: 200px;
+            background: #ff0036;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 事件三要素 事件源 事件处理函数 事件 -->
+    <div id="div1"></div>
+    <script>
+        var oDiv = document.getElementById('div1');
+        // e代表整个事件 event
+        oDiv.onclick = function(e){
+            // e.target 事件源
+            console.log(e.target);
+            // 获取鼠标距离屏幕左/上的距离
+            console.log(e.clientX);
+            console.log(e.clientY);
+        }
+    
+    </script>
+</body>
+
+</html>
