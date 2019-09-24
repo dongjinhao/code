@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #container {
+            position: relative;
+            height: 384px;
+            width: 768px;
+            margin: 100px auto;
+        }
+
+        #container #img-box img {
+            width: 768px;
+            height: 384px;
+            display: none;
+        }
+
+        #container #img-box img.active {
+            display: block;
+        }
+
+        #container #btn-box li.selected {
+            background: #ccc;
+        }
+
+        #container #btn-box li,
+        #container #arrow-box li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            margin-right: 8px;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #container #arrow-box {
+            position: absolute;
+            bottom: 20px;
+            left: 25px;
+        }
+
+        #container #arrow-box li:hover {
+            background: #ccc;
+        }
+
+        #container #btn-box {
+            position: absolute;
+            bottom: 15px;
+            right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="img-box">
+            <img class="active" src="./img/wardenlight-studio-wls-sony-cabin-fever-church01.jpg" alt="">
+            <img src="./img/spider-man-_into_the_spider-verse_still_1.jpg" alt="">
+            <img src="./img/spiderman-into-the-spider-verse-city-movie-2018-z.jpg" alt="">
+            <img src="./img/wardenlight-studio-spiderman-itsv-artwork-p1warde(1).jpg" alt="">
+            <img src="./img/wardenlight-studio-spiderman-itsv-artwork-p1warde.jpg" alt="">
+        </div>
+        <ul id="btn-box">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul id="arrow-box">
+            <!-- &lt 小于号 less &gt 大于号 great -->
+            <li id="prev">&lt;</li>
+            <li id="next">&gt;</li>
+        </ul>
+        <script>
+            var oBtnBox = document.getElementById('btn-box');
+            var aBtn = oBtnBox.getElementsByTagName('li');
+            var oImgBox = document.getElementById('img-box');
+            var aImg = oImgBox.getElementsByTagName('img');
+            var oNext = document.getElementById('next');
+            var oPrev = document.getElementById('prev');
+
+            var iNow = 0;
+
+            for (var i = 0; i < aBtn.length; i++) {
+                // 给aBtn中每个元素自定义一个.index属性 记录每个元素的索引
+                aBtn[i].index = i;
+                aBtn[i].onclick = function () {
+                    for (var j = 0; j < aBtn.length; j++) {
+                        aBtn[j].className = '';
+                        aImg[j].className = '';
+                    }
+                    this.className = 'selected';
+                    aImg[this.index].className = 'active';
+                }
+            }
+
+            oNext.onclick = function () {
+                iNow++;
+                for (var k = 0; k < aImg.length; k++) {
+                    aBtn[k].className = '';
+                    aImg[k].className = '';
+                }
+                aBtn[iNow].className = 'selected';
+                aImg[iNow].className = 'active';
+            }
+
+            function change(idx) {
+                for (var j = 0; j < aBtn.length; j++) {
+                    aBtn[j].className = '';
+                    aImg[j].className = '';
+                }
+                aBtn[idx].className = 'selected';
+                aImg[idx].className = 'active';
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
